@@ -19,7 +19,7 @@ class CreateMembersTable extends Migration
             $table->string('surname')->nullable();
             $table->string('idNumber')->nullable();
              $table->string('mobileNumber')->nullable();
-            $table->bigInteger('birthDate')->nullable();
+            $table->string('birthDate')->nullable();
             $table->string('language')->nullable();
             $table->timestamps();
         });

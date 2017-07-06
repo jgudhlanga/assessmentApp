@@ -40,7 +40,7 @@
             <div class="form-group col-md-12">
                 <label for="birthDate" class="col-md-3">Birth Date</label>
                 <div class="col-md-9">
-                    <input type="date" class="form-control input-sm" name="birthDate"
+                    <input type="date" class="form-control input-sm" name="birthDate" id='datepicker'
                            @isset($member)value="{{$member->birthDate }}" @else value="{{ old('birthDate')}}" @endisset id="birthDate"/>
                 </div>
             </div>
@@ -58,7 +58,9 @@
                         <option value="">-- select language--</option>
                         @if(count($languages))
                             @foreach($languages as $language)
-                            <option value="{{ $language->language }}">{{ $language->language }}</option>
+                            <option value="{{ $language->language }}">
+                                {{ $language->language }}
+                            </option>
                             @endforeach
                         @endif
                     </select>

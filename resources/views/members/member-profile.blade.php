@@ -48,7 +48,15 @@
                  @endif
              </div>
              <div class="col-md-12 text-center">
-                 <a class="btn btn-primary btn-lg" href="{{ route('dashboard') }}">Back</a>
+                <a class="btn btn-primary btn-lg" href="{{ route('dashboard') }}">
+                    <i class="glyphicon glyphicon-chevron-left">&nbsp;</i>Back
+                </a>
+                <a class="btn btn-info btn-lg" href="{{ route('getEditMember', ['id'=>$member->id]) }}">
+                    <i class="glyphicon glyphicon-pencil">&nbsp;</i>Edit
+                <a/>    
+                <a class="btn btn-danger btn-lg" onclick="return confirm('Are you sure?')" href="{{ route('delete.member', ['id'=>$member->id]) }}">
+                    <i class="glyphicon glyphicon-trash">&nbsp;</i>Delete
+                 <a/>
              </div>
          </div>
     </div>    

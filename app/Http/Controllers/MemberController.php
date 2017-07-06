@@ -80,10 +80,11 @@ class MemberController extends Controller
             //save the interests of the member
             $this->createInterests($member, $request['interests']);
            //redirect to the dashboard
-          return redirect()->route('dashboard')->with(['message' => 'Member successfully added']);
+          return redirect()-> route('profile.view', ['id' => $member->id])->with(['message' => 'Member profile successfully added']);
         }else{
             return redirect()->back()->with(['error' => 'Error: something went wrong']);
         }
+       
     }
     
     public function createInterests($member, $interests){

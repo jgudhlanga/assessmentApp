@@ -40,7 +40,7 @@
                        <a class="btn btn-info btn-xs" href="{{ route('getEditMember', ['id'=>$member->id]) }}">
                            <i class="glyphicon glyphicon-pencil">&nbsp;</i>Edit
                        <a/>    
-                       <a class="btn btn-danger btn-xs" href="{{ route('delete.member', ['id'=>$member->id]) }}">
+                       <a class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete?')" href="{{ route('delete.member', ['id'=>$member->id]) }}">
                            <i class="glyphicon glyphicon-trash">&nbsp;</i>Delete
                         <a/>
                     </div>
