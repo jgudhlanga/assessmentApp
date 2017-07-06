@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04 Jul 2017, 7:13:19 PM
+    Author     : james
+*/
+
+/*HEADER NAV BAR */
+.custom-nav-bar{
+    background-color: $custom-brand !important;
+    border-radius: 0 !important;
+    a{
+        color: lighten($custom-brand, 50%) !important;
+        &:hover{
+            color: orangered !important;
+        }
+    }
+    .custom-brand{
+        font-size: 25px !important;
+        color: lighten($custom-brand, 30%) !important;
+        font-weight: bold;
+        margin-right: 30px;
+        text-shadow: 1px 1px lighten($custom-brand, 100%);
+    }
+}
+/*CONTENT*/
+.custom-content{
+    width: 100% !important;
+    .header-h3{
+        font-weight: bold; margin-bottom: 10px; padding: 10px; font-size: 22px !important;
+        border-bottom: 1px solid lighten($custom-brand, 60%);
+       
+    }
+    .div-center-min{
+        width: 50%;
+        margin: 0 auto !important;
+    }
+    
+    .div-center-min-100{ 
+        width: 100%;
+        margin: 0 auto !important;
+    }
+}
+.name-tag{
+    border: 1px solid lighten($custom-brand, 60%);
+    border-radius: 5px;
+    padding: 10px;
+    .header{
+        font-weight: bold; font-size: 16px; color:lighten($custom-brand, 50%) !important;
+    }
+    .details{
+        color: #6b9dbb !important;
+        overflow: hidden;
+        .title{
+            display: inline-block; float:left; width: 40%;
+        }
+        .value{
+            display: inline-block; float:left; width: 60%;
+        }
+    } 
+}
+.margin-top{
+    margin-top: 10px;
+}
+a{
+    text-decoration: none !important;
+}
+.custom-ul{
+    list-style: none;
+    li{
+       margin: 0; padding: 0; 
+    }
+}
+
+
