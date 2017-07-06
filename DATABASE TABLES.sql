@@ -1,5 +1,4 @@
 
-
 CREATE TABLE `interests` (
   `id` int(10) UNSIGNED NOT NULL,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
@@ -57,7 +56,7 @@ CREATE TABLE `members` (
   `surname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `idNumber` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `mobileNumber` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `birthDate` bigint(20) DEFAULT NULL,
+  `birthDate` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `language` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -68,8 +67,7 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`id`, `name`, `surname`, `idNumber`, `mobileNumber`, `birthDate`, `language`, `created_at`, `updated_at`) VALUES
-(1, 'James', 'Moyo', '98762552523', '0788104809', NULL, 'Afrikaans', '2017-07-06 07:13:18', '2017-07-06 07:13:18'),
-(2, 'Nancy', 'Gora', '9876255252', '0788104809', NULL, 'French', '2017-07-06 07:13:59', '2017-07-06 07:13:59');
+(2, 'Chris', 'Melody', '7864554', '0788104809', '07/24/2017', 'Zulu', '2017-07-06 09:58:55', '2017-07-06 09:58:55');
 
 -- --------------------------------------------------------
 
@@ -90,12 +88,9 @@ CREATE TABLE `member_interests` (
 --
 
 INSERT INTO `member_interests` (`id`, `member_id`, `interest_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2017-07-06 07:13:18', '2017-07-06 07:13:18'),
-(2, 1, 2, '2017-07-06 07:13:18', '2017-07-06 07:13:18'),
-(3, 1, 3, '2017-07-06 07:13:18', '2017-07-06 07:13:18'),
-(4, 2, 1, '2017-07-06 07:13:59', '2017-07-06 07:13:59'),
-(5, 2, 2, '2017-07-06 07:13:59', '2017-07-06 07:13:59'),
-(6, 2, 3, '2017-07-06 07:13:59', '2017-07-06 07:13:59');
+(4, 2, 2, '2017-07-06 09:58:55', '2017-07-06 09:58:55'),
+(5, 2, 3, '2017-07-06 09:58:55', '2017-07-06 09:58:55'),
+(6, 2, 4, '2017-07-06 09:58:55', '2017-07-06 09:58:55');
 
 -- --------------------------------------------------------
 
@@ -114,11 +109,11 @@ CREATE TABLE `migrations` (
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
-(21, '2017_07_05_054233_create_users_table', 1),
-(22, '2017_07_05_054259_create_members_table', 1),
-(23, '2017_07_05_054341_create_member_interests_table', 1),
-(24, '2017_07_05_054411_create_interests_table', 1),
-(25, '2017_07_05_054433_create_languages_table', 1);
+(26, '2017_07_05_054233_create_users_table', 1),
+(27, '2017_07_05_054259_create_members_table', 1),
+(28, '2017_07_05_054341_create_member_interests_table', 1),
+(29, '2017_07_05_054411_create_interests_table', 1),
+(30, '2017_07_05_054433_create_languages_table', 1);
 
 -- --------------------------------------------------------
 
@@ -142,7 +137,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `surname`, `email`, `remember_token`, `password`, `created_at`, `updated_at`) VALUES
-(1, 'James', 'Gudhlanga', 'jimmyneds@gmail.com', 'URKMEaYrGdx8aU7DPQXEN89WvoeRr2DINB0aDHBDHAOqsQJUWKL5X3qZIWCX', '$2y$10$GLa5u3tD40sQ1wiwAUAHtOcjOixBKP80ko6wgYeOBkrkwayHZCQGu', '2017-07-06 07:12:00', '2017-07-06 07:12:00');
+(1, 'James', 'Gudhlanga', 'admin@dev.com', NULL, '$2y$10$zNRTusOSIhPbQ9ZkUK/hFu4JVeGElHQL8j2HDJJC.lsRiC5siUCva', '2017-07-06 10:44:30', '2017-07-06 10:44:30');
 
 --
 -- Indexes for dumped tables
@@ -212,7 +207,7 @@ ALTER TABLE `member_interests`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `users`
 --
